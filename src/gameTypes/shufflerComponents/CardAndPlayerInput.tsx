@@ -13,11 +13,25 @@ const CardAndPlayerInput: React.FC<{
   const handleOnChangeCards = (val: any) => {
     const numGiven = parseInt(val.target.value);
 
+    if(numGiven < 0 ){
+      console.log("can't have negative numbers")
+    }
     if (numGiven > numOfCards) {
       console.log("Can't get more cards per person");
     } else {
       console.log(numGiven, numOfCards);
       setCardInput(numGiven);
+    }
+  };
+
+  const handleOnChangePlayers = (val: any) => {
+    const numGiven = parseInt(val.target.value);
+
+    if (numGiven < 0) {
+      console.log("can't have negative number of players");
+    } else {
+      console.log(numGiven, numOfCards);
+      setPlayerInput(numGiven);
     }
   };
 
@@ -60,6 +74,8 @@ const CardAndPlayerInput: React.FC<{
           <input
             id="numOfPlayersInput"
             type="number"
+            value={playerInput}
+            onChange={handleOnChangePlayers}
             onBlur={onBlurOfPlayers}
             style={{ width: "400px", height: "50px", fontSize: "1.5em" }}
             disabled={toggle === undefined ? true : toggle}
