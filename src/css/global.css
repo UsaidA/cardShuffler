@@ -1,0 +1,11 @@
+:global(::-webkit-scrollbar) {
+    display: none; 
+  }
+  
+  :global(body) {
+    scrollbar-width: none;
+  }
+  
+  :global(html) {
+    overflow-y: scroll; 
+  }

@@ -1,0 +1,59 @@
+
+.parent-container {
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 500px;
+    margin-bottom: 200px;
+}
+
+.goButton{
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white; 
+
+}
+.goButton:hover {
+    background-color: #3b853e; 
+  
+  }
+
+.back{
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #af4c4c;
+    color: white; 
+    align-self: flex-start;
+
+}
+.back:hover {
+    background-color: #853b3b; 
+  
+  }
+  .fade-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out; 
+  }
+  
+  .fade-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out; 
+  }
+  

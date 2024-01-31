@@ -1,0 +1,106 @@
+
+  .player-areas-container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5px; 
+  }
+  
+  .eachPlayerArea {
+    min-width: 225px; 
+    max-width: 225px;
+    height: 300px; 
+    border-top: 1px solid rgba(0, 0, 0, 0.245); 
+    position: relative;
+    margin-right: 10px;
+    
+  }
+
+  .eachPlayerArea .card {
+    position: absolute;
+    bottom: 10;
+    left: 0;
+    transition: transform 0.3s ease; 
+    animation: dealIn 0.5s ;
+    
+  }
+
+  @keyframes dealIn {
+    0% {
+      opacity: 1;
+      transform: translateX(-100vw);
+    }
+    100% {
+      opacity: 1;
+      transform:translateX(0);
+    }
+  }
+  
+  
+  .eachPlayerArea:hover .card {
+    transform: translateY(calc(50% * (var(--card-index) - 1))); 
+  }
+
+
+  .buttonGroup{
+    display:flex;
+    gap:10px;
+  }
+
+  .Button{
+
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #3971d1;
+    color: white; 
+    border: none;
+  }
+  .Button:hover{
+    background-color: #1f3c6d;
+  }
+  
+  .win-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #44bf61;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInOut 4s;
+    z-index: 9999;
+  }
+
+  .draw-animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #a5a5a5;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInOut 4s;
+    z-index: 9999;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(2);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(2.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+  }
+  
+  
