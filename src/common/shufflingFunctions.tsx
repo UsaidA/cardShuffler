@@ -1,7 +1,6 @@
 import { CardInterface } from "./interfaces";
 
 export function fisherYatesShuffle(deck: CardInterface[]): CardInterface[] {
-  console.log(2);
   const deckCopy = [...deck];
 
   let i = deckCopy.length;
