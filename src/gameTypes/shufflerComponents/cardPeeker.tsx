@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CardInterface } from "../../common/interfaces";
 import "../../css/cardPeeker.css";
 import PlayingCard from "../../commonComponents/Playingcard";
@@ -7,8 +7,17 @@ const CardPeeker: React.FC<{
   deck: CardInterface[];
   togglePeeker: () => void;
 }> = ({ deck, togglePeeker }) => {
-  const [currentCardIndex, setCurrentCardIndex] = useState(deck.length - 1);
 
+  const [currentCardIndex, setCurrentCardIndex] = useState(deck.length - 1);
+  const [displayIndex, setDisplayIndex] = useState(1)
+
+  
+  useEffect(()=>{
+    let temp  = (deck.length - currentCardIndex)
+    setDisplayIndex(temp)
+
+
+  }, [currentCardIndex])
   const nextCard = () => {
     setCurrentCardIndex((prevIndex) => (prevIndex + 1) % deck.length);
   };
@@ -22,21 +31,26 @@ const CardPeeker: React.FC<{
   return (
     <div className="modal-overlay">
       <div className="card-peeker-modal">
-        <button className="close-button" onClick={togglePeeker}>
+        <button className="back" onClick={togglePeeker}>
           Close
-        </button>
-        <button className="nav-button" onClick={prevCard}>
-          Next
         </button>
         <div className="card-display">
           <PlayingCard
             cardNumber={deck[currentCardIndex].value}
             cardSuit={deck[currentCardIndex].suit}
-          ></PlayingCard>
+          />
+          <div className="card-nav">
+          <button className="nav-button" onClick={nextCard}>
+           <i className="arrow left"></i>
+            </button>
+            <span className="index-display">{displayIndex}</span> 
+          
+            <button className="nav-button" onClick={prevCard}>
+            <i className="arrow right"></i>
+            </button>
+            
+          </div>
         </div>
-        <button className="nav-button" onClick={nextCard}>
-          Previous
-        </button>
       </div>
     </div>
   );

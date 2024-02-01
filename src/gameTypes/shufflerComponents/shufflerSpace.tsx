@@ -24,6 +24,7 @@ const ShufflerSpace: React.FC<ShufferSpaceInterface> = ({
   const [openPeeker, setPeeker] = useState<boolean>(false);
   const deckLimit = 52 - numOfCardsPerPlayer * numOfPlayers;
   const [toggleDealButton, setToggleDealButton] = useState<boolean>(true);
+  const [disablePeeker, setDisablePeeker] = useState(false)
   const [showWinAnimation, setShowWinAnimation] = useState(false);
   const [showDrawAnimation, setShowDrawAnimation] = useState(false);
 
@@ -71,7 +72,14 @@ const ShufflerSpace: React.FC<ShufferSpaceInterface> = ({
   }, [pDeck.length]);
 
   const togglePeeker = () => {
-    setPeeker(!openPeeker);
+    if(pDeck.length == 0){
+      setDisablePeeker(true)
+
+
+    }else{
+      setPeeker(!openPeeker);
+    }
+ 
   };
 
   const shuffle = () => {
@@ -130,7 +138,7 @@ const ShufflerSpace: React.FC<ShufferSpaceInterface> = ({
       )}
       <Navbar handleBackClick={handleBackClick}>
         <div className="buttonGroup">
-          <button onClick={() => togglePeeker()} className="Button">
+          <button disabled = {disablePeeker} onClick={() => togglePeeker()} className="Button">
             Peek!
           </button>
           {openPeeker && (

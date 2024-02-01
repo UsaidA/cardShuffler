@@ -150,28 +150,41 @@ exports[`renders correctly 1`] = `
     className="card-peeker-modal"
   >
     <button
-      className="close-button"
+      className="back"
       onClick={[MockFunction]}
     >
       Close
-    </button>
-    <button
-      className="nav-button"
-      onClick={[Function]}
-    >
-      Next
     </button>
     <div
       className="card-display"
     >
       <div />
+      <div
+        className="card-nav"
+      >
+        <button
+          className="nav-button"
+          onClick={[Function]}
+        >
+          <i
+            className="arrow left"
+          />
+        </button>
+        <span
+          className="index-display"
+        >
+          1
+        </span>
+        <button
+          className="nav-button"
+          onClick={[Function]}
+        >
+          <i
+            className="arrow right"
+          />
+        </button>
+      </div>
     </div>
-    <button
-      className="nav-button"
-      onClick={[Function]}
-    >
-      Previous
-    </button>
   </div>
 </div>
 `;
