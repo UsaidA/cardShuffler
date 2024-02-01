@@ -48,10 +48,21 @@ const CardAndPlayerInput: React.FC<{
     let temp = !toggle;
     setToggle(temp);
 
+    
+
     let numOfPlayers = parseInt(val.target.value);
     let numOfCardsAvailable = numOfCards;
 
-    numOfCardsAvailable = numOfCardsAvailable / numOfPlayers;
+    let modulus = numOfCardsAvailable % numOfPlayers
+
+    if(modulus === 0 ){
+      numOfCardsAvailable =  numOfCardsAvailable / numOfPlayers;
+    }else if(modulus !==0){
+      let temp = numOfCardsAvailable - modulus;
+
+      numOfCardsAvailable = (temp/ numOfPlayers) ;
+    }
+   
 
     setnumOfCards(numOfCardsAvailable);
     setPlayers(val);
