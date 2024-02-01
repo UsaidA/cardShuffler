@@ -16,7 +16,7 @@ const CardAndPlayerInput: React.FC<{
     if(numGiven < 0 ){
       console.log("can't have negative numbers")
     }
-    if (numGiven > numOfCards) {
+    else if (numGiven > numOfCards) {
       console.log("Can't get more cards per person");
     } else {
       console.log(numGiven, numOfCards);
@@ -29,7 +29,10 @@ const CardAndPlayerInput: React.FC<{
 
     if (numGiven < 0) {
       console.log("can't have negative number of players");
-    } else {
+    }else if(numGiven > numOfCards){
+      console.log("never more than 52")
+    }
+     else {
       console.log(numGiven, numOfCards);
       setPlayerInput(numGiven);
     }
@@ -55,7 +58,7 @@ const CardAndPlayerInput: React.FC<{
   };
 
   return (
-    <div className="center-container">
+    <div >
       <div className="input-container">
         <div className="generalDiv">
           <label htmlFor="numOfCardsInput">Number of Cards Per Player:</label>
@@ -69,7 +72,7 @@ const CardAndPlayerInput: React.FC<{
             disabled={!toggle}
           />
         </div>
-        <div>
+        <div className="generalDiv">
           <label htmlFor="numOfPlayersInput">Number of Players:</label>
           <input
             id="numOfPlayersInput"
@@ -81,9 +84,11 @@ const CardAndPlayerInput: React.FC<{
             disabled={toggle === undefined ? true : toggle}
           />
         </div>
+       
 
         <br />
       </div>
+      
     </div>
   );
 };

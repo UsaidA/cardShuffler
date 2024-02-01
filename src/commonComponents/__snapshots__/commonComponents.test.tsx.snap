@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Component is rendered correctly 1`] = `
+<nav
+  className="navbar fixed-top navbar-expand-lg navbar-light"
+  style={
+    Object {
+      "backgroundColor": "#bcbcbc83",
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <div>
+      <button
+        className="back"
+        onClick={[Function]}
+      >
+        BACK!
+      </button>
+    </div>
+    <div
+      className="collapse navbar-collapse"
+      id="navbarNav"
+    >
+      <ul
+        className="navbar-nav ms-auto"
+      />
+    </div>
+  </div>
+</nav>
+`;
+
+exports[`renders correctly 1`] = `<div />`;

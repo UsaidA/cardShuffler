@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = ({ children, handleBackClick }: any) => {
   return (
     <nav
-      className="navbar navbar-expand-lg navbar-light"
+      className="navbar fixed-top navbar-expand-lg navbar-light"
       style={{ backgroundColor: "#bcbcbc83" }}
     >
       <div className="container">
@@ -14,9 +14,10 @@ const Navbar = ({ children, handleBackClick }: any) => {
               handleBackClick(true);
             }}
           >
-            BACK!
+            BACK! 
           </button>
         </div>
+        
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">{children}</ul>

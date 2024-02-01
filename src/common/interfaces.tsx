@@ -3,6 +3,11 @@ export interface CardInterface {
   suit: string;
   rank: number;
 }
+export interface PlayingCardComponentInterface{
+  cardNumber: string; 
+  cardSuit: string 
+
+}
 
 export interface DeckOfCardsContextInterface {
   deck: CardInterface[];

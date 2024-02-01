@@ -58,8 +58,11 @@ const Shuffler = (props: any) => {
           classNames="fade"
           unmountOnExit
         >
+          
           <div className="parent-container">
+       
             <div className="center-container">
+
               <div>
                 <CardAndPlayerInput
                   setCards={setNumOfCardsCallback}

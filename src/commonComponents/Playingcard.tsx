@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "../css/playingCard.css";
+import { PlayingCardComponentInterface } from "../common/interfaces";
 
-const PlayingCard: React.FC<{ cardNumber: string; cardSuit: string }> = ({
+const PlayingCard: React.FC<PlayingCardComponentInterface> = ({
   cardNumber,
   cardSuit,
 }) => {

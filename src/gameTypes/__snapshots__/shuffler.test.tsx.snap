@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardAndPlayerInput component rendered correctly 1`] = `
+<div>
+  <div
+    className="input-container"
+  >
+    <div
+      className="generalDiv"
+    >
+      <label
+        htmlFor="numOfCardsInput"
+      >
+        Number of Cards Per Player:
+      </label>
+      <input
+        disabled={true}
+        id="numOfCardsInput"
+        onBlur={[Function]}
+        onChange={[Function]}
+        style={
+          Object {
+            "fontSize": "1.5em",
+            "height": "50px",
+            "width": "400px",
+          }
+        }
+        type="number"
+        value={0}
+      />
+    </div>
+    <div
+      className="generalDiv"
+    >
+      <label
+        htmlFor="numOfPlayersInput"
+      >
+        Number of Players:
+      </label>
+      <input
+        disabled={false}
+        id="numOfPlayersInput"
+        onBlur={[Function]}
+        onChange={[Function]}
+        style={
+          Object {
+            "fontSize": "1.5em",
+            "height": "50px",
+            "width": "400px",
+          }
+        }
+        type="number"
+        value={0}
+      />
+    </div>
+    <br />
+  </div>
+</div>
+`;
+
+exports[`Shuffler Component is rendered correctly 1`] = `
+<div>
+  <div>
+    <div
+      className="parent-container"
+    >
+      <div
+        className="center-container"
+      >
+        <div>
+          <div>
+            <div
+              className="input-container"
+            >
+              <div
+                className="generalDiv"
+              >
+                <label
+                  htmlFor="numOfCardsInput"
+                >
+                  Number of Cards Per Player:
+                </label>
+                <input
+                  disabled={true}
+                  id="numOfCardsInput"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  style={
+                    Object {
+                      "fontSize": "1.5em",
+                      "height": "50px",
+                      "width": "400px",
+                    }
+                  }
+                  type="number"
+                  value={0}
+                />
+              </div>
+              <div
+                className="generalDiv"
+              >
+                <label
+                  htmlFor="numOfPlayersInput"
+                >
+                  Number of Players:
+                </label>
+                <input
+                  disabled={false}
+                  id="numOfPlayersInput"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  style={
+                    Object {
+                      "fontSize": "1.5em",
+                      "height": "50px",
+                      "width": "400px",
+                    }
+                  }
+                  type="number"
+                  value={0}
+                />
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div />
+        </div>
+      </div>
+      <div>
+        <button
+          className="goButton"
+          onClick={[Function]}
+        >
+          GO!
+        </button>
+      </div>
+    </div>
+    <div />
+  </div>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="modal-overlay"
+>
+  <div
+    className="card-peeker-modal"
+  >
+    <button
+      className="close-button"
+      onClick={[MockFunction]}
+    >
+      Close
+    </button>
+    <button
+      className="nav-button"
+      onClick={[Function]}
+    >
+      Next
+    </button>
+    <div
+      className="card-display"
+    >
+      <div />
+    </div>
+    <button
+      className="nav-button"
+      onClick={[Function]}
+    >
+      Previous
+    </button>
+  </div>
+</div>
+`;

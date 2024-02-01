@@ -27,6 +27,12 @@ const ShufflerSpace: React.FC<ShufferSpaceInterface> = ({
   const [showWinAnimation, setShowWinAnimation] = useState(false);
   const [showDrawAnimation, setShowDrawAnimation] = useState(false);
 
+  useEffect(()=>{
+    if (pDeck.length <= deckLimit) {
+      setToggleDealButton(false);
+    } 
+
+  },[pDeck.length])
   useEffect(() => {
     setPlayerDeck(Array.from({ length: numOfPlayers }, () => []));
     console.log(playerDecks);
@@ -139,7 +145,7 @@ const ShufflerSpace: React.FC<ShufferSpaceInterface> = ({
               Deal
             </button>
           ) : (
-            <button onClick={handleEnd} className="Button">
+            <button onClick={handleEnd} className="EndButton">
               END!
             </button>
           )}
